@@ -1,0 +1,54 @@
+  # Docker Compose v2 New Commands
+  
+  # Build a Specific Profile
+
+  # Note: When a specific profile is mentioned, you must use mentioned below command
+  
+  # docker compose --help
+
+  # docker compose --project-name influxdb-grafana --profile app up -d --build
+
+  # docker compose --project-name influxdb-grafana --profile app ps
+
+  # docker compose --project-name influxdb-grafana --profile app logs app
+  
+  ########
+  # PAUSE
+  ########
+  
+  # docker compose --project-name influxdb-grafana --profile app pause app  # command suspends all processes in the specified containers
+  
+  # docker compose --project-name influxdb-grafana --profile app unpause app # command un-suspends all processes in the specified containers
+  
+  ######
+  # PULL
+  ######
+  
+  # docker compose --project-name influxdb-grafana --profile app pull   # pull the latest images
+  
+  # docker compose --project-name influxdb-grafana --profile app up -d --build
+  
+  # docker compose --project-name influxdb-grafana --profile app top
+
+  # docker compose --profile app up -d --build
+
+  # docker compose --project-name influxdb-grafana --profile app down
+
+  # docker compose ls
+  
+  ########
+  # Build
+  ########
+  
+  # docker compose build app
+  
+  ########################
+  # Up No Build No Profie
+  ########################
+  
+  # docker compose --project-name influxdb-grafana up -d                     # Must Define Project Name with Docker Compose v2
+  
+
+  # docker images
+
+# End
