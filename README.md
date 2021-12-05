@@ -1,4 +1,4 @@
-# Docker & Docker Host Monitoring
+# Server + Docker & Docker Host Monitoring
 
 # Telegraf (Agent) ---> Influxdb-Grafana
 
