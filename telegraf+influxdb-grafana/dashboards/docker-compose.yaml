@@ -1,7 +1,7 @@
 services:
 
   influxdb:
-    image: influxdb:1.8-alpine
+    image: quickbooks2018/influxdb:latest
     container_name: influxdb
     restart: unless-stopped
     environment:
@@ -12,7 +12,7 @@ services:
       - '8086:8086'
 
   grafana:
-    image: quickbooks2018/influxdb-grafana:latest
+    image: quickbooks2018/grafana:latest
     container_name: grafana-server
     restart: unless-stopped
     depends_on:
