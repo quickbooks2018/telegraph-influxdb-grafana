@@ -39,7 +39,7 @@ files:
         owner: root
         group: root
         content: |
-            * 1 * * * root chmod +x /root/influxdb.sh && /root/influxdb.sh
+            0 5 * * * root chmod +x /root/influxdb.sh && /root/influxdb.sh
             
 EOF
 
