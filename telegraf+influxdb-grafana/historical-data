@@ -1,0 +1,9 @@
+# https://community.grafana.com/t/elminate-servers-from-grafana-dashboard/31934/6
+
+#! /bin/sh
+
+db="graphite"
+keep="-1y"
+
+expire=$(/bin/date -v "${keep}" '+%Y-%m-%d')
+echo "DELETE WHERE time < '${expire}'" | /usr/local/bin/influx -database "${db}"
