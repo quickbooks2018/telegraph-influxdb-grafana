@@ -7,3 +7,13 @@ keep="-1y"
 
 expire=$(/bin/date -v "${keep}" '+%Y-%m-%d')
 echo "DELETE WHERE time < '${expire}'" | /usr/local/bin/influx -database "${db}"
+
+
+
+# My Solution Do Not Set Influxdb as Persistent Storage Set as Container
+
+########################################
+# Cron Job on Host Machine may be Daily
+########################################
+docker compose down influxdb
+docker compose up influxdb
