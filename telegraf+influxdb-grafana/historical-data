@@ -15,6 +15,8 @@ echo "DELETE WHERE time < '${expire}'" | /usr/local/bin/influx -database "${db}"
 ########################################
 # Cron Job on Host Machine may be Daily
 ########################################
+# https://superuser.com/questions/1160798/docker-compose-up-down-just-one-container
+
 docker compose rm -f -s -v SERVICENAME
 
 docker compose rm -f -s -v influxdb
