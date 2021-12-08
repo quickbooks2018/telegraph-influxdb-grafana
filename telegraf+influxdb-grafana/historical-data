@@ -21,3 +21,26 @@ docker compose rm -f -s -v SERVICENAME
 
 docker compose rm -f -s -v influxdb
 docker compose up -d
+
+
+#!/bin/bash
+# OS: AmazonLinux
+
+cat << EOF > /root/influxdb.sh
+docker compose rm -f -s -v influxdb
+docker compose up -d
+
+EOF
+
+cat << EOF > /etc/cron.d/influxdb
+files:
+    "/etc/cron.d/influxdb":
+        mode: "000644"
+        owner: root
+        group: root
+        content: |
+            * 1 * * * root chmod +x /root/influxdb.sh && /root/influxdb.sh
+            
+EOF
+
+# End
