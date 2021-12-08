@@ -17,18 +17,18 @@ echo "DELETE WHERE time < '${expire}'" | /usr/local/bin/influx -database "${db}"
 ########################################
 # https://superuser.com/questions/1160798/docker-compose-up-down-just-one-container
 
-docker compose rm -f -s -v SERVICENAME
+docker compose --project-name influxdb-grafana rm -f -s -v (ServiceName)
 
-docker compose rm -f -s -v influxdb
-docker compose up -d
+docker compose --project-name influxdb-grafana rm -f -s -v influxdb
+docker compose --project-name influxdb-grafana up -d
 
 
 #!/bin/bash
 # OS: AmazonLinux
 
 cat << EOF > /root/influxdb.sh
-docker compose rm -f -s -v influxdb
-docker compose up -d
+docker compose --project-name influxdb-grafana rm -f -s -v influxdb
+docker compose --project-name influxdb-grafana up -d
 
 EOF
 
@@ -40,7 +40,8 @@ files:
         group: root
         content: |
             0 5 * * * root chmod +x /root/influxdb.sh && /root/influxdb.sh
-            
+
 EOF
+
 
 # End
