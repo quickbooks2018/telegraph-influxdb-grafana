@@ -12,6 +12,9 @@ echo "DELETE WHERE time < '${expire}'" | /usr/local/bin/influx -database "${db}"
 
 # My Solution Do Not Set Influxdb as Persistent Storage Set as Container
 
+# Use this docker-compose  https://github.com/quickbooks2018/telegraph-influxdb-grafana/blob/main/telegraf%2Binfluxdb-grafana/dashboards/docker-compose.yaml
+
+
 ########################################
 # Cron Job on Host Machine may be Daily
 ########################################
