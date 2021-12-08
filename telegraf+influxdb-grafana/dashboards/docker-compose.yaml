@@ -12,7 +12,7 @@ services:
       - '8086:8086'
 
   grafana:
-    image: grafana/grafana
+    image: quickbooks2018/influxdb-grafana:latest
     container_name: grafana-server
     restart: unless-stopped
     depends_on:
