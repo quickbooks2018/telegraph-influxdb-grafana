@@ -61,4 +61,5 @@ EOF
  cat << EOF > /etc/cron.d/influxdb
  0 5 * * * root chmod +x /root/influxdb.sh && /root/influxdb.sh
  
+ 
  EOF
