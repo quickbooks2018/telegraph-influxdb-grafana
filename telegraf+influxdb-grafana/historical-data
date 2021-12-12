@@ -50,16 +50,41 @@ EOF
 # End
 
 
-# Note: Ubuntu CronJob
+#!/bin/bash
+# OS: Ubuntu
 
- Sample: 
- 
- 51 16 * * *   root    test -x /etc/cron.daily/popularity-contest && /etc/cron.daily/popularity-contest --crond
- 
+########################################
+# Cron Job on Host Machine may be Daily
+########################################
+
+
+#docker compose --project-name influxdb-grafana rm -f -s -v (ServiceName)
+#docker compose --project-name influxdb-grafana rm -f -s -v influxdb
+#docker compose --project-name influxdb-grafana up -d
+
+
+
+
+
+cat << EOF > /root/influxdb.sh
+docker compose --project-name influxdb-grafana rm -f -s -v influxdb
+docker compose --project-name influxdb-grafana up -d
+
+EOF
+
+cat << EOF > /etc/cron.d/influxdb
  0 5 * * * root chmod +x /root/influxdb.sh && /root/influxdb.sh
  
- cat << EOF > /etc/cron.d/influxdb
- 0 5 * * * root chmod +x /root/influxdb.sh && /root/influxdb.sh
  
+EOF
+
+# End
+
+
+# Note: Ubuntu CronJob
+# Sample: 
  
- EOF
+# 51 16 * * *   root    test -x /etc/cron.daily/popularity-contest && /etc/cron.daily/popularity-contest --crond
+ 
+
+# End
