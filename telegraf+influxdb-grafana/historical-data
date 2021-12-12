@@ -73,7 +73,7 @@ docker compose --project-name influxdb-grafana up -d
 EOF
 
 cat << EOF > /etc/cron.d/influxdb
- 0 5 * * * root chmod +x /root/influxdb.sh && /root/influxdb.sh
+0 5 * * * root chmod +x /root/influxdb.sh && /root/influxdb.sh
  
  
 EOF
