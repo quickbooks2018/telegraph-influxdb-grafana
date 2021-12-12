@@ -30,6 +30,7 @@ docker compose --project-name influxdb-grafana up -d
 # OS: AmazonLinux
 
 cat << EOF > /root/influxdb.sh
+#!/bin/bash
 docker compose --project-name influxdb-grafana rm -f -s -v influxdb
 docker compose --project-name influxdb-grafana up -d
 
@@ -67,6 +68,7 @@ EOF
 
 
 cat << EOF > /root/influxdb.sh
+#!/bin/bash
 docker compose --project-name influxdb-grafana rm -f -s -v influxdb
 docker compose --project-name influxdb-grafana up -d
 
