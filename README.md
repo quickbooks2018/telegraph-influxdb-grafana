@@ -20,3 +20,10 @@ sh get-docker.sh
 4. Influxdb Grafana Setup with docker compose
 
 5. Import Dashboards
+
+- Telegrad Agent For Windows
+- https://portal.influxdata.com/downloads/
+
+```telegraf
+wget https://dl.influxdata.com/telegraf/releases/telegraf-1.23.2_windows_amd64.zip -UseBasicParsing -OutFile telegraf-1.23.2_windows_amd64.zip
+```
