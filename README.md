@@ -31,3 +31,7 @@ cd C:\Program Files\Telegraf
 telegraf.exe -service install
 net start telegraf
 ```
+- docker influxdb
+```influxdb
+influx -database 'telegraf' -host 'localhost' -username 'admin'
+```
