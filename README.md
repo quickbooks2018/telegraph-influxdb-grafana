@@ -34,4 +34,5 @@ net start telegraf
 - docker influxdb
 ```influxdb
 influx -database 'telegraf' -host 'localhost' -username 'admin'
+show databases
 ```
