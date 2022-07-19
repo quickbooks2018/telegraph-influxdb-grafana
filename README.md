@@ -35,4 +35,6 @@ net start telegraf
 ```influxdb
 influx -database 'telegraf' -host 'localhost' -username 'admin'
 show databases
+use telegraf
+show measurements
 ```
