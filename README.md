@@ -27,4 +27,7 @@ sh get-docker.sh
 ```telegraf
 wget https://dl.influxdata.com/telegraf/releases/telegraf-1.23.2_windows_amd64.zip
 https://dl.influxdata.com/telegraf/releases/telegraf-1.23.2_windows_amd64.zip
+cd C:\Program Files\Telegraf
+telegraf.exe -service install
+net start telegraf
 ```
