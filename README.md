@@ -25,5 +25,6 @@ sh get-docker.sh
 - https://portal.influxdata.com/downloads/
 
 ```telegraf
-wget https://dl.influxdata.com/telegraf/releases/telegraf-1.23.2_windows_amd64.zip -UseBasicParsing -OutFile telegraf-1.23.2_windows_amd64.zip
+wget https://dl.influxdata.com/telegraf/releases/telegraf-1.23.2_windows_amd64.zip
+https://dl.influxdata.com/telegraf/releases/telegraf-1.23.2_windows_amd64.zip
 ```
